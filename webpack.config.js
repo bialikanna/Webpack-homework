@@ -26,10 +26,10 @@ module.exports = {
             template: "./css/index.html"
         }),
         new CleanWebpackPlugin({
-            template: './css/kontakt.html',
+            template: './css/index.html',
             inject: true,
             chunks: ['index'],
-            filename: 'kontakt.html'
+            filename: 'index.html'
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[hash].css"
@@ -59,7 +59,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.scss$/,
-            use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader","postcss-loader"]
+            use: [MiniCssExtractPlugin.loader,"css-loader","sass-loader"]
         },
         {
             test: /\.js$/,
